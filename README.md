@@ -1,5 +1,6 @@
 # Redirecting . . .
+
 ---
 layout: forward
-target: dist/
+target: https://marc-rene.github.io/dist
 ---
