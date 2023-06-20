@@ -1,14 +1,10 @@
 <template>
-    <div class="h1_top">
-        <h1>FORTY THREE</h1>
-        <h2 >
-            A GAME DESIGN DOCUMENT
-        </h2>
-    </div>
-    <div class="video_bg">
+    <div class="main_container">
         <video autoplay muted preload="auto" id="actual_vid">
-            <source src="../assets/ink_drop_2.mp4" type="video/mp4">
+            <source src="../assets/video/ink_drop_2_depressed.mp4" type="video/mp4">
         </video>
+        <h1>    FORTY THREE             </h1>
+        <h2>    A GAME DESIGN DOCUMENT  </h2>
     </div>
 </template>
 
@@ -19,64 +15,79 @@ export default
         props: {
         }
     }
+/*
+let video_ref = document.getElementById("actual_vid");
+
+video_ref.onended()
+{
+    console.log("Looping");
+    video_ref.currentTime =4;
+}*/
 
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.h1_top {
-    color: white;
+.main_container {
+    color: black;
     width: 100vw;
-    text-align: center;
-    position: absolute;
-    z-index: 10 !important;
-    padding-top: 0;
+    height: 100vh;
+    padding: 0;
     margin: 0;
-    top: 50%;
-    /* position the top  edge of the element at the middle of the parent */
-    transform: translate(0, -50%);
-    /* This is a shorthand of
-    translateX(-50%) and translateY(-50%) */
-    letter-spacing: 3vw;
-    text-align: center;
-    animation: get_smaller 10s ease-in-out forwards;
+    z-index: -10;
+    animation: get_smaller 80s ease-in-out forwards;
 }
-#h1_top h1 {
-    font-size: 10rem;
+h1 
+{
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    height: 20vh;
+    text-align: center;
+    vertical-align: text-top;
+    top: 40vh;
+    width: 100%;
+    font-size: 8vw;
+    z-index: -9;
+    min-height: 10px;
 }
 
-/*
-h2{
-    color: black    !important;
-    text-align: center  !important;
-    position: absolute  !important;
-    z-index: 10 !important;
-    padding-top: 0  !important;
-    margin: 0   !important;
-    opacity: 1  !important;
-    font-weight: 100    !important;
-    font-size: 3rem   !important;
-    animation-direction:    reverse ;
-    animation-fill-mode:    backwards;
-    
-}*/
-.video_bg {
-    width: 100vw;
-    margin-top: -100px;
-    padding-top: -500px;
-    z-index: -1;
-    position: absolute;
-    object-fit: contain;
+h2
+{
+    min-height: 10px;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    height: 20vh;
+    text-align: center;
+    vertical-align: text-bottom;
+    top: 60vh;
+    width: 100%;
+    font-size: 2vw;
+    z-index: -9;
+}
+
+#actual_vid
+{
+    object-fit: cover;
+    z-index: -50;
+    position: fixed;
+    resize: none;
+    padding: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    min-width: 100%;
 }
 
 @keyframes get_smaller 
 {
-    0%      { letter-spacing: 3vw !important;      color: white;   }
-    100%     { letter-spacing: 1vw !important;      color: black;   }    
+    0%      { letter-spacing: 3vw;      color: black;   }
+    20%     { letter-spacing: 1vw;      color: white;   }    
+    100%    { letter-spacing: 2vw;      color: rgb(192, 0, 0);   }    
 }
 
 
-#actual_vid {
-    width: 100%;
-}
+
 </style>
