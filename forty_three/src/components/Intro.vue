@@ -1,7 +1,7 @@
 <template>
     <div class="main_container">
-        <video autoplay muted preload="auto" id="actual_vid">
-            <source src="../assets/video/ink_drop_2_depressed.mp4" type="video/mp4">
+        <video autoplay muted preload="auto" id="actual_vid" onended="currentTime = 30;play();">
+            <source src="../assets/video/ink_drop_2_depressed_LOOP.mp4" type="video/mp4">
         </video>
         <h1>    FORTY THREE             </h1>
         <h2>    A GAME DESIGN DOCUMENT  </h2>
@@ -9,34 +9,28 @@
 </template>
 
 <script>
+
 export default
     {
         name: 'HomeIntro',
         props: {
-        }
+        },
+
     }
-/*
-let video_ref = document.getElementById("actual_vid");
-
-video_ref.onended()
-{
-    console.log("Looping");
-    video_ref.currentTime =4;
-}*/
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .main_container {
     color: black;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     padding: 0;
     margin: 0;
     z-index: -10;
     animation: get_smaller 80s ease-in-out forwards;
 }
+
 h1 
 {
     position: fixed;
@@ -62,6 +56,7 @@ h2
     text-align: center;
     vertical-align: text-bottom;
     top: 60vh;
+
     width: 100%;
     font-size: 2vw;
     z-index: -9;
@@ -78,14 +73,14 @@ h2
     margin: 0;
     width: 100%;
     height: 100vh;
-    min-width: 100%;
 }
 
 @keyframes get_smaller 
 {
-    0%      { letter-spacing: 3vw;      color: black;   }
-    20%     { letter-spacing: 1vw;      color: white;   }    
-    100%    { letter-spacing: 2vw;      color: rgb(192, 0, 0);   }    
+    0%      { letter-spacing: 3.5vw;      color: white;   }
+    20%     { letter-spacing: 0.8vw;      color: rgb(30,30,30);   }    
+    30%     {                           color: rgb(190, 0, 0);   }    
+    100%    { letter-spacing: 2vw;      color: red  }    
 }
 
 

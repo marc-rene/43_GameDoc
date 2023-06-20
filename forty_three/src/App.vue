@@ -1,58 +1,92 @@
 <template>
   <HomeIntro/>
   <WhereTo/>
+  <PreProd/>
 </template>
 
 <script>
 import HomeIntro  from './components/Intro.vue'
 import WhereTo    from './components/Where_to.vue'
+import PreProd    from './components/PreProd.vue'
 
 export default {
   name: 'App',
   components: {
     HomeIntro,
-    WhereTo
+    WhereTo,
+    PreProd
   }
 }
 </script>
 
 <style>
 body{
-  background-color:rgba(0, 0, 0, 0);
+  
   overflow-x: hidden;
+  overflow-y: auto;
   margin: 0;
+  padding: 0;
+
 }
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
 
+/*
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  color: slategray;
+  color: aliceblue;
 }
  
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgba(36, 36, 36, 0.2); 
   border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(36, 36, 36, 0.5); 
 }
 
-/* Handle on pressed */
 ::-webkit-scrollbar-thumb:active {
   background: rgba(36, 36, 36, 0.9); 
 }
+*/
+
+
+::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  width: 10px;
+  z-index: -500;
+  background: transparent;
+  background-color: transparent;
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(50,50,50); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(75,75,75); ; 
+}
+
+/* Handle on pressed */
+::-webkit-scrollbar-thumb:active {
+  background: red; 
+}
+
 </style>
