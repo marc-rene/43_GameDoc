@@ -30,7 +30,10 @@ export default
     z-index: -10;
     animation: get_smaller 80s ease-in-out forwards;
 }
-
+@font-face {
+    font-family: scorched;
+    src: url(../assets/font/ScorchedEarthDEMO-KCFonts.otf);
+}
 h1 
 {
     position: fixed;
@@ -40,6 +43,7 @@ h1
     text-align: center;
     vertical-align: text-top;
     top: 40vh;
+    font-family: scorched;
     width: 100%;
     font-size: 8vw;
     z-index: -9;
@@ -77,10 +81,10 @@ h2
 
 @keyframes get_smaller 
 {
-    0%      { letter-spacing: 3.5vw;      color: white;   }
-    20%     { letter-spacing: 0.8vw;      color: rgb(30,30,30);   }    
-    30%     {                           color: rgb(190, 0, 0);   }    
-    100%    { letter-spacing: 2vw;      color: red  }    
+    0%      { letter-spacing: 3vw;      color: white;   }
+    20%     { letter-spacing: 0.8vw;    color: rgb(30,30,30);   }    
+    30%     { letter-spacing: 1.1vw;    color: rgb(190, 0, 0);   }    
+    100%    { letter-spacing: 2.5vw;    color: red  }    
 }
 
 

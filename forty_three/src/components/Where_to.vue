@@ -3,11 +3,11 @@
 
         <div class="main_grid">
             <div class="span_all">
-                <hr>
+                
                 <h1>
                     A First-Person, Action, Roleplaying, Non-Linear Adventure...
                 </h1>
-                <hr>
+                <hr style="width: 50vw;">
             </div>
             <div class="grid_item">
                 <h3>

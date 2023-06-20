@@ -23,7 +23,7 @@ export default {
 body{
   
   overflow-x: hidden;
-  overflow-y: auto;
+  
   margin: 0;
   padding: 0;
 

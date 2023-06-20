@@ -2,12 +2,7 @@
     <div class="pre_prod_container">
         <div class="the_side">
 
-            <a href="#actual_vid">
-                <img src="../assets/logo.png" class="sidebar_logo" style=" width: 5vw; 
-                            filter: invert(1); 
-                            padding: 2vw;
-                            min-width: 50px;">
-            </a>
+           
 
             <a href="javascript:void(0)" class="sidebar_item">
                 My drive
@@ -126,11 +121,17 @@ export default
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+body
+{
+    margin: 0;
+    padding: 0;
+}
 .pre_prod_container {
     background: url('data:image/svg+xml;utf8,<svg width="100" height="100" transform="rotate(0)" opacity="0.2" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g  fill="%23250E17"><circle cx="25" cy="25" r="12.5"/><circle cx="75" cy="75" r="12.5"/><circle cx="75" cy="25" r="12.5"/><circle cx="25" cy="75" r="12.5"/></g></svg>'),
         rgb(30, 30, 30);
     background-size: 35px, 100%;
-    width: 100%;
+    width: 100;
+    height: 100%;
     display: grid;
     margin: 0;
     padding: 0;
@@ -147,26 +148,23 @@ export default
     grid-column-end: 4;
 }
 
-.sidebar_logo {
-    transition: 1s;
-}
 
-.sidebar_logo:hover {
-    transform: scale(1.1);
-}
 
 h1 {
     color: aliceblue;
 }
 
 .the_side {
-    color: #fff;
+    margin: 0;
+    padding: 0;
+    color: #000;
     width: 100%;
     position: sticky;
     min-width: 120px;
     padding-left: 1vw;
+    padding-top: 2vw;
     height: 100%;
-    background-image: linear-gradient(30deg, rgb(30, 30, 30), rgb(100, 45, 45));
+    background-image: linear-gradient(30deg, rgb(30, 30, 30), aliceblue);
     border-top-right-radius: 5vw;
     text-align: justify;
     text-transform: uppercase;
@@ -176,7 +174,7 @@ h1 {
 
 .the_side .sidebar_item {
     font-size: 12px;
-    color: #fff;
+    color: #000;
     display: block;
     padding: 12px;
     padding-left: 30px;
@@ -185,11 +183,11 @@ h1 {
 }
 
 .the_side .sidebar_item:hover {
-    color: #3f5efb;
-    background: #fff;
+    color: aliceblue;
+    background: rgb(30,30,30);
     outline: none;
     position: relative;
-    background-color: #fff;
+    background-color: rgb(30,30,30);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -207,7 +205,7 @@ h1 {
     height: 35px;
     width: 35px;
     border-bottom-right-radius: 18px;
-    box-shadow: 0 20px 0 0 #fff;
+    box-shadow: 0 20px 0 0 rgb(30, 30, 30);
 }
 
 .the_side .sidebar_item:hover::before {
@@ -219,7 +217,7 @@ h1 {
     height: 35px;
     width: 35px;
     border-top-right-radius: 18px;
-    box-shadow: 0 -20px 0 0 #fff;
+    box-shadow: 0 -20px 0 0 rgb(30, 30,30);
 }
 
 .the_side p {
